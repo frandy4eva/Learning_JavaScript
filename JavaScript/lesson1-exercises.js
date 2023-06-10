@@ -14,3 +14,15 @@ ${shippingHandlingTotal}
 ${preTaxTotal}
 ${estimatedTax}
 ${orderTotal}`);
+
+// Update cart to 1 basketball and 1 t-shirt, free shipping
+itemsTotal = `Items (2): $${(2095 + 799) / 100}`;
+preTaxTotal = `Total before tax: $${2894 / 100}`;
+estimatedTax = `Estimated tax (10%): $${Math.round(2894 * 0.1) / 100}`;
+orderTotal = `Order total: $${(2894 + 289) / 100}`;
+
+console.log(`
+${itemsTotal}
+${preTaxTotal}
+${estimatedTax}
+${orderTotal}`);
