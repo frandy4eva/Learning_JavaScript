@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+button {
+  padding: 15px;
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  margin: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button:first-of-type,
+button:last-of-type {
+  color: brown;
+}
+
+p {
+  margin: 15px auto;
+  background: lightcyan;
+  color: indianred;
+  width: 200px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
