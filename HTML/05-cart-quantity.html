@@ -136,15 +136,7 @@ console.log(`Cart quantity: ${cartQuantity -= 1}`);
     >
       REMOVE
     </button>
-    <button
-      id="reset-btn"
-      onclick="
-    alert(`Item(s): ${cartQuantity = 0}\nYour cart was RESET`);
-    console.log(`Cart quantity: ${cartQuantity}`);
-    "
-    >
-      Reset Cart
-    </button>
+    <button id="reset-btn">Reset Cart</button>
 
     <!-- Script code below this line  -->
     <script>
@@ -152,6 +144,26 @@ console.log(`Cart quantity: ${cartQuantity -= 1}`);
       const cartFull = false;
       const cartCapacity = 10;
       let availableSpace = 0;
+
+      // Cart reset confirmation code
+      const resetButton = document.getElementById("reset-btn");
+
+      resetButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const confirmed = confirm(
+          `All items will be removed.\nDo you wish to continue?`
+        );
+
+        if (!confirmed) {
+          return;
+        }
+
+        // Reset the reset the cart
+        alert(`Item(s) in cart: ${(cartQuantity = 0)}\nYour cart was RESET`);
+        console.log(`Cart quantity: ${cartQuantity}`);
+        // resetButton.form.reset();
+      });
     </script>
   </body>
 </html>
