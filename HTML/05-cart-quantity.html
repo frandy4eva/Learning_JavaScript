@@ -12,6 +12,13 @@
     <button
       id="quantity-btn"
       onclick="
+      
+      
+      if (cartQuantity === 10) {
+        alert(`Items: ${cartQuantity}\nYour cart is FULL`);
+    }else if (cartQuantity === 0) {
+      alert(`Items: ${cartQuantity}\nYour cart is EMPTY`);
+    }
     console.log(`Cart quantity: ${cartQuantity}`);
     "
     >
@@ -20,7 +27,14 @@
     <button
       id="add-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity += 1}`);
+    if (cartQuantity +  1 <= 10) {
+console.log(`Cart quantity: ${cartQuantity += 1}`);
+}else if (cartQuantity - cartCapacity === 0){
+  alert('Your cart is FULL');
+}else {
+availableSpace = cartCapacity - cartQuantity;
+alert(`Not enough space.\nYou have ${availableSpace} space(s) left.`);
+}
     "
     >
       Add to Cart
@@ -28,7 +42,14 @@
     <button
       id="plus2-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity += 2}`);
+    if (cartQuantity +  2 <= 10) {
+console.log(`Cart quantity: ${cartQuantity += 2}`);
+}else if (cartQuantity - cartCapacity === 0){
+  alert('Your cart is FULL');
+}else {
+availableSpace = cartCapacity - cartQuantity;
+alert(`Not enough space.\nYou have ${availableSpace} space(s) left.`);
+}
     "
     >
       +2
@@ -36,7 +57,14 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity += 3}`);
+    if (cartQuantity +  3 <= 10) {
+console.log(`Cart quantity: ${cartQuantity += 3}`);
+}else if (cartQuantity - cartCapacity === 0){
+  alert('Your cart is FULL');
+}else {
+availableSpace = cartCapacity - cartQuantity;
+alert(`Not enough space.\nYou have ${availableSpace} space(s) left.`);
+}
     "
     >
       +3
@@ -44,7 +72,14 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity += 4}`);
+    if (cartQuantity +  4 <= 10) {
+console.log(`Cart quantity: ${cartQuantity += 4}`);
+}else if (cartQuantity - cartCapacity === 0){
+  alert('Your cart is FULL');
+}else {
+availableSpace = cartCapacity - cartQuantity;
+alert(`Not enough space.\nYou have ${availableSpace} space(s) left.`);
+}
     "
     >
       +4
@@ -52,7 +87,14 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity += 5}`);
+    if (cartQuantity +  5 <= 10) {
+console.log(`Cart quantity: ${cartQuantity += 5}`);
+}else if (cartQuantity - cartCapacity === 0){
+  alert('Your cart is FULL');
+}else {
+availableSpace = cartCapacity - cartQuantity;
+alert(`Not enough space.\nYou have ${availableSpace} space(s) left.`);
+}
     "
     >
       +5
@@ -61,7 +103,11 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity -= 2}`);
+    if (cartQuantity - 2 < 0) {
+alert(`You  can only remove ${cartQuantity} item(s)`);
+}else {
+console.log(`Cart quantity: ${cartQuantity -= 2}`);
+}
     "
     >
       -2
@@ -69,7 +115,11 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity -= 3}`);
+    if (cartQuantity - 3 < 0) {
+alert(`You  can only remove ${cartQuantity} item(s)`);
+}else {
+console.log(`Cart quantity: ${cartQuantity -= 3}`);
+}
     "
     >
       -3
@@ -77,7 +127,11 @@
     <button
       id="plus3-btn"
       onclick="
-    console.log(`Cart quantity: ${cartQuantity -= 1}`);
+    if (cartQuantity - 1 < 0) {
+alert(`You  can only remove ${cartQuantity} item(s)`);
+}else {
+console.log(`Cart quantity: ${cartQuantity -= 1}`);
+}
     "
     >
       REMOVE
@@ -85,7 +139,7 @@
     <button
       id="reset-btn"
       onclick="
-    console.log(`Cart was reset.\nCart quantity: ${cartQuantity = 0}`);
+    alert(`Item(s): ${cartQuantity = 0}\nYour cart was RESET`);
     "
     >
       Reset Cart
@@ -94,6 +148,9 @@
     <!-- Script code below this line  -->
     <script>
       let cartQuantity = 0;
+      const cartFull = false;
+      const cartCapacity = 10;
+      let availableSpace = 0;
     </script>
   </body>
 </html>
