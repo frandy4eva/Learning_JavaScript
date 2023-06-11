@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <button id="flip-btn">Flipper</button>
+    <script>
+      let flipBtn = document.getElementById("flip-btn");
+      let flipper;
+      let result;
+      let guess;
+      flipBtn.addEventListener("click", () => {
+        // flipBtn.style.display = "border-color: red";
+        guess = prompt("Heads or Tails?: ");
+        function randint(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        flipper = randint(1, 2);
+        // if (flipper === 1) {
+        //   result = "Heads";
+        // } else if (flipper === 2) {
+        //   result = "Tails";
+        // }
+
+        // if (guess === result) {
+        //   alert(`You pick ${guess} and computer pick ${result}\nYou WIN!!!`);
+        // } else {
+        //   alert(`You pick ${guess} and computer pick ${result}\nYou lose!`);
+        // }
+        flipper === 1
+          ? (result = "Heads")
+          : flipper === 2
+          ? (result = "Tails")
+          : (result = "undefined");
+
+        guess === result
+          ? alert(`You pick ${guess} and computer pick ${result}\nYou WIN!!!`)
+          : alert(`You pick ${guess} and computer pick ${result}\nYou lose!`);
+      });
+    </script>
+  </body>
+</html>

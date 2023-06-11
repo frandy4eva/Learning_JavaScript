@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing with Booleans</title>
+  </head>
+  <body>
+    <script>
+      const hour = prompt("Enter the current hour: ");
+      let sleeping;
+      let morningActivity;
+      if (hour >= 0 && hour < 4) {
+        sleeping = prompt("Sleeping, true or false: ");
+        if (sleeping === true) {
+          alert("Sweet dreams!");
+        } else {
+          document.write("Did you get enough sleep?");
+        }
+      } else if (hour >= 4 && hour < 8) {
+        sleeping = prompt("Sleeping, true or false: ");
+        if (sleeping === true) {
+          alert("Wake up!");
+        } else {
+          morningActivity = prompt("Had breakfast, true or false:");
+          if (morningActivity === true) {
+            document.write("Good job!");
+          } else {
+            alert("Go eat breakfast!");
+          }
+        }
+      } else {
+        document.write("Have a great day!");
+        alert("Have a nice day!");
+      }
+
+      // Results prints at the bottom
+      document.write();
+    </script>
+  </body>
+</html>
